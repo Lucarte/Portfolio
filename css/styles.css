@@ -41,9 +41,10 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
-    text-decoration: underline;
+    text-decoration: ;
+    padding: auto;
 }
 
 h3 {
@@ -184,40 +185,32 @@ span {
 
 /* Specific to ABOUT page */
 
+
 .aboutpage {
     margin: 0 50px;
     text-align: center;
 }
 
-.aboutpage h2 {
-    color: rgb(0, 0, 0);
-}
-
 #about-p {
-    margin-bottom: 0px;
-    justify-self: left;
-}
-
-#about-p2 {
     margin-top: 10px;
-    margin-bottom: 45px;
-}
-
-.aboutpage-list {
-    padding-bottom: 35px;
-    margin-right: 40px;
-    list-style-type: none;
+    margin-bottom: 30px;
 }
 
 .about-secondlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     list-style-type: none;
-    margin-right: 40px;   
-    margin-top: 10px;
-    margin-bottom: 45px; 
+    margin-bottom: 100px;
+    margin-top: 0;
+    margin-right: 40px;
 }
-
-#climbing {
-    margin-bottom: 0px;
+#about-h2 {
+    margin-top: 20px;
+    margin-bottom: 18px;
+}
+#about-h22 {
+    margin-bottom: 0;
 }
 
 #CV-button {
@@ -226,11 +219,11 @@ span {
     background-color: var(--primary-color);
     border: double var(--secondary-color);
     border-radius: 13px;
-    padding: 13px 18px;
+    padding: 4px 10px;
 }
 
 table {
-    width: 600px;
+    width: 700px;
     margin: 0 auto;
     margin-bottom: 45px;
     border: solid var(--primary-color);
@@ -242,6 +235,13 @@ thead {
 
 tbody {
     text-align: center;
+}
+
+#body-start {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: auto;
 }
 
 /* Specific to CONTACT page */
@@ -266,7 +266,7 @@ form {
 
 /* Ask why this does not work */
 #email-link {
-    justify-content: right;
+    align-content: right;
 }
 
 
@@ -359,10 +359,24 @@ form {
     }
 }
 
+
 #silla {
-    animation: 4s silla-move infinite alternate linear;
+    animation: 8s silla-move infinite alternate linear;
 }
-   
+
+@keyframes cicla-move {
+    from {
+        transform: translate(-2px, 0);
+    }
+    to {
+        transform: translate(400px, 0);
+    }
+}
+
+#cicla {
+    animation: 40s cicla-move infinite alternate linear;
+}
+
   /* #rueda-externa-1 {
     animation-name: spin;
     animation-duration: 4000ms;
