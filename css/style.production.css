@@ -2,14 +2,13 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.3.6,
 * Autoprefixer: v10.3.1
-* Browsers: last 2 version
+* Browsers: last 4 version
 */
 
-:root {
-    --primary-color: antiquewhite;
-    --secondary-color: black;
-    --red: #ee0000;
-}
+
+/* Set the default width of an element 
+to include the padding and the border via the 
+"box-sizing" property and "border-box" value */
 
 * {
     -webkit-box-sizing: border-box;
@@ -23,8 +22,8 @@ html, body {
 
 body {
     margin: 0;
-    background-color: var(--red);
-    color: var(--primary-color);
+    background-color: #ee0000;
+    color: antiquewhite;
     font-family: 'Caveat';
     font-weight: 400; 
     font-size: 24px; 
@@ -44,9 +43,10 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
-    text-decoration: underline;
+    text-decoration: none;
+    padding: auto;
 }
 
 h3 {
@@ -55,11 +55,11 @@ h3 {
 }
 
 a {
-    color: var(--primary-color);
+    color: antiquewhite;
 }
 
 a:visited {
-    color: var(--secondary-color);
+    color: black;
 }
 
 a:hover, :focus {
@@ -70,17 +70,31 @@ a:active {
     text-decoration: none;
 }
 
-button,
-#CV-button {
-    border: double var(--secondary-color);
+button {
+    border: double black;
     display: inline-block;
     font-family: inherit;
     border-radius: 3px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: antiquewhite;
+    color: black;
     text-decoration: none;
     padding: 10px;
     -webkit-transition: 0.2 opacity;
+    -o-transition: 0.2 opacity;
+    transition: 0.2 opacity;
+}
+
+#CV-button {
+    border: double black;
+    display: inline-block;
+    font-family: inherit;
+    border-radius: 3px;
+    background-color: antiquewhite;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-transition: 0.2 opacity;
+    -o-transition: 0.2 opacity;
     transition: 0.2 opacity;
 }
 
@@ -98,7 +112,7 @@ button:focus,
 }
 
 .navigation-list__item--active {
-    color: var(--secondary-color);
+    color: black;
 }
 
 .navigation__logo {
@@ -141,9 +155,9 @@ button:focus,
 }
 
 .profile {
+    max-width: 700px;
     padding: 100px 0px;
     line-height: 40px;
-    max-width: 700px;
     margin: 0 auto; 
 }
 
@@ -186,7 +200,7 @@ button:focus,
 
 /* this styles the horizontal ruler */
 hr {
-    border: 1.5px solid var(--primary-color);
+    border: 1.5px solid antiquewhite;
     margin: 0px;
 }
 
@@ -199,57 +213,55 @@ span {
 
 /* Specific to ABOUT page */
 
+
 .aboutpage {
     margin: 0 50px;
     text-align: center;
 }
 
-.aboutpage h2 {
-    color: rgb(0, 0, 0);
-}
-
 #about-p {
-    margin-bottom: 0px;
-    -ms-grid-column-align: left;
-        justify-self: left;
-}
-
-#about-p2 {
     margin-top: 10px;
-    margin-bottom: 45px;
-}
-
-.aboutpage-list {
-    padding-bottom: 35px;
-    margin-right: 40px;
-    list-style-type: none;
+    margin-bottom: 30px;
 }
 
 .about-secondlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     list-style-type: none;
-    margin-right: 40px;   
-    margin-top: 10px;
-    margin-bottom: 45px; 
+    margin-bottom: 100px;
+    margin-top: 0;
+    margin-right: 40px;
 }
-
-#climbing {
-    margin-bottom: 0px;
+#about-h2 {
+    margin-top: 20px;
+    margin-bottom: 18px;
+}
+#about-h22 {
+    margin-bottom: 0;
 }
 
 #CV-button {
     margin-top: 45px;
     margin-bottom: 65px;
-    background-color: var(--primary-color);
-    border: double var(--secondary-color);
+    background-color: antiquewhite;
+    border: double black;
     border-radius: 13px;
-    padding: 13px 18px;
+    padding: 4px 10px;
 }
 
 table {
-    width: 600px;
+    width: 700px;
     margin: 0 auto;
     margin-bottom: 45px;
-    border: solid var(--primary-color);
+    border: solid antiquewhite;
 }
 
 thead {
@@ -260,11 +272,35 @@ tbody {
     text-align: center;
 }
 
+#body-start {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 700px;
+    margin: auto;
+}
+
 /* Specific to CONTACT page */
 
 .contact-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 700px;
     margin-top: 40px;
     margin-left: 30px;
+}
+.contact-main :last-child {
+    margin-left: auto;
+
 }
 
 form {
@@ -283,13 +319,6 @@ form {
 .standard-label {
     line-height: 35px;
     margin-top: 10px;
-}
-
-/* Ask why this does not work */
-#email-link {
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
 }
 
 
@@ -314,8 +343,8 @@ form {
     padding: 20px;
   }
   .grid__item {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: antiquewhite;
+    color: black;
     width: auto;
     min-height: auto;
     margin: 0;
@@ -366,24 +395,24 @@ form {
 
 @-webkit-keyframes color-change {
     0% {
-        fill: var(--primary-color);
+        fill: antiquewhite;
     }
     50% {
         fill: #c0c5ce;
     }
     100% {
-        fill: var(--secondary-color)    }
+        fill: black    }
 }
 
 @keyframes color-change {
     0% {
-        fill: var(--primary-color);
+        fill: antiquewhite;
     }
     50% {
         fill: #c0c5ce;
     }
     100% {
-        fill: var(--secondary-color)    }
+        fill: black    }
 }
 
 #luna {
@@ -414,11 +443,39 @@ form {
     }
 }
 
+
 #silla {
-    -webkit-animation: 4s silla-move infinite alternate linear;
-            animation: 4s silla-move infinite alternate linear;
+    -webkit-animation: 8s silla-move infinite alternate linear;
+            animation: 8s silla-move infinite alternate linear;
 }
-   
+
+@-webkit-keyframes cicla-move {
+    from {
+        -webkit-transform: translate(-2px, 0);
+                transform: translate(-2px, 0);
+    }
+    to {
+        -webkit-transform: translate(400px, 0);
+                transform: translate(400px, 0);
+    }
+}
+
+@keyframes cicla-move {
+    from {
+        -webkit-transform: translate(-2px, 0);
+                transform: translate(-2px, 0);
+    }
+    to {
+        -webkit-transform: translate(400px, 0);
+                transform: translate(400px, 0);
+    }
+}
+
+#cicla {
+    -webkit-animation: 40s cicla-move infinite alternate linear;
+            animation: 40s cicla-move infinite alternate linear;
+}
+
   /* #rueda-externa-1 {
     animation-name: spin;
     animation-duration: 4000ms;
@@ -451,7 +508,7 @@ Border X get width
 
 .borderXwidth a
 {
-    color: var(--primary-color);
+    color: antiquewhite;
     text-decoration: none;
     font: 20px Raleway;
     margin: 0px 10px;
@@ -461,15 +518,29 @@ Border X get width
     cursor: pointer;
 }
 
-.borderXwidth a:before, .borderXwidth a:after
+.borderXwidth a:before
 {
     position: absolute;
     opacity: 0;
     width: 0%;
     height: 2px;
     content: '';
-    background: var(--secondary-color);
+    background: black;
     -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: black;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
