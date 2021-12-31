@@ -43,7 +43,7 @@ h1 {
 h2 {
     font-size: 26px;
     font-weight: 700;
-    text-decoration: ;
+    text-decoration: none;
     padding: auto;
 }
 
@@ -133,7 +133,6 @@ button:focus,
 .profile {
     padding: 100px 0px;
     line-height: 40px;
-    max-width: 700px;
     margin: 0 auto; 
 }
 
@@ -247,8 +246,15 @@ tbody {
 /* Specific to CONTACT page */
 
 .contact-main {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
     margin-top: 40px;
     margin-left: 30px;
+}
+.contact-main :last-child {
+    margin-left: auto;
+
 }
 
 form {
@@ -262,11 +268,6 @@ form {
 .standard-label {
     line-height: 35px;
     margin-top: 10px;
-}
-
-/* Ask why this does not work */
-#email-link {
-    align-content: right;
 }
 
 
